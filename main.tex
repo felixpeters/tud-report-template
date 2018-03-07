@@ -1,0 +1,90 @@
+\documentclass[twoside, type=sta, colorback,accentcolor=tud1c, 11pt, numbersubsubsec]{tudthesis}
+\usepackage[german]{babel}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\usepackage{framed}
+\usepackage{mdframed}
+\usepackage{courier}
+\usepackage{amsmath}
+
+\mdfsetup{nobreak=true}
+\mdtheorem{definition}{Definition}
+\mdtheorem{formula}{Formula}
+
+\usepackage{float}
+% Figure caption
+\usepackage{caption}
+\captionsetup[figure]{name=Figure}
+\captionsetup[table]{name=Table}
+
+% Paragraph style
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{1em}
+
+\DeclareMathSizes{11}{14}{9}{9}
+\linespread{1.3}
+
+\newcommand{\getmydate}{%
+  \ifcase\month%
+  \or Januar\or Februar\or M\"arz%
+  \or April\or Mai\or Juni\or Juli%
+  \or August\or September\or Oktober%
+  \or November\or Dezember%
+  \fi\ \number\year%
+}
+
+\parskip=2mm
+
+\begin{document}
+\thesistitle{Report title}{}
+
+\author{Felix Peters}
+\birthplace{Bad Soden am Taunus}
+
+\department{Fachbereich Rechts- und Wirtschaftswissenschaften}
+\group{Wirtschaftsinformatik}
+\referee{Name of supervisor}{}
+
+% Start of text output
+\makethesistitle
+
+\affidavit[ 06.03.2018 ]{Felix Peters}
+
+\chapter*{Abstract}
+
+\renewcommand{\contentsname}{Table of contents}
+\tableofcontents
+
+\renewcommand{\listfigurename}{List of figures}
+\listoffigures
+
+\renewcommand{\listtablename}{List of tables}
+\listoftables
+
+\chapter{Introduction}
+
+\section{Problem}
+
+\section{Objectives}
+
+\section{Approach}
+
+\chapter{Background}
+
+\chapter{Methodology}
+
+\chapter{Results}
+
+\chapter{Conclusion}
+
+\chapter{Future work}
+
+\bibliographystyle{plain}
+\newpage
+\renewcommand{\bibname}{References}
+\bibliography{thesis}
+
+\end{document}
